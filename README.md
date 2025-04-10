@@ -15,10 +15,10 @@ O React Native é construído com base no JavaScript, e o Node.js é a plataform
 ### Passo 2: Instalação do npm ou Yarn
 
 O npm (Node Package Manager) é uma ferramenta que permite instalar e gerenciar pacotes de JavaScript. O Yarn é outra opção semelhante. Ambos são amplamente usados com o React Native. Eles são instalados automaticamente quando você instala o Node.js.
-
+ 
 ### Passo 3: Instalação do Expo (Opcional)
 
-O Expo é uma ferramenta que simplifica o desenvolvimento React Native, permitindo que você crie aplicativos sem a necessidade de configurar emuladores ou ambientes nativos. Para instalá-lo, você pode executar o seguinte comando no terminal:
+O Expo [https://expo.dev/](https://expo.dev/)é uma ferramenta que simplifica o desenvolvimento React Native, permitindo que você crie aplicativos sem a necessidade de configurar emuladores ou ambientes nativos. Para instalá-lo, você pode executar o seguinte comando no terminal: 
 
 ```bash
 npm install -g expo-cli
