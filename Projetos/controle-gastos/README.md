@@ -31,7 +31,7 @@ controle-gastos/
 ├── package.json
 ├── tsconfig.json
 └── babel.config.js
-``
+```
 ## 1. node_modules/
 
 🔹 **O que é**: Pasta criada automaticamente pelo npm/yarn
