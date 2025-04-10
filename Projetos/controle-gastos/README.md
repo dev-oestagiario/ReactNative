@@ -21,23 +21,17 @@ npm run android   # Para Android
 npm run ios       # Para iOS
 npm run web       # Para versão web
 
-📂 Estrutura de Pastas
-
-```bash
-/src
-  /components    # Componentes reutilizáveis
-  /screens       # Telas do aplicativo
-  /contexts      # Contextos do React
-  /types         # Tipos TypeScript
-  /utils         # Utilitários e helpers
-``
-
-Crie essas pastas manualmente ou com o comando:
-```bash
-mkdir -p src/{components,screens,contexts,types,utils}
-```
 # Estrutura do Projeto React Native com Expo e TypeScript
-
+```bash
+controle-gastos/
+├── node_modules/
+├── assets/
+├── App.tsx
+├── app.json
+├── package.json
+├── tsconfig.json
+└── babel.config.js
+```
 ## 1. node_modules/
 
 🔹 **O que é**: Pasta criada automaticamente pelo npm/yarn
@@ -245,6 +239,22 @@ module.exports = {
 	 
 	- Expo CLI usa todas essas configurações para gerar os binários
 
+
+📂 Estrutura de Pastas
+
+```bash
+/src
+  /components    # Componentes reutilizáveis
+  /screens       # Telas do aplicativo
+  /contexts      # Contextos do React
+  /types         # Tipos TypeScript
+  /utils         # Utilitários e helpers
+```
+
+Crie essas pastas manualmente ou com o comando:
+```bash
+mkdir -p src/{components,screens,contexts,types,utils}
+```
 
 📦 Dependências Necessárias
 
