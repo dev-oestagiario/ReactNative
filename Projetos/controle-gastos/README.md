@@ -298,13 +298,13 @@ Finalidade: Armazenar componentes reutilizáveis da UI
 
 	- Pastas para componentes complexos:
 
-			```bash
+```bash
 			/components
 			  /ExpenseCard
 			    index.ts
 			    ExpenseCard.tsx
 			    styles.ts
-			```
+```
 ## 2. /screens
 
 - Finalidade: Telas principais/navegáveis do app
@@ -349,7 +349,7 @@ Finalidade: Armazenar componentes reutilizáveis da UI
 
 Estrutura típica:
 
-	```bash
+```bash
 	// 1. Criação do contexto
 	const MyContext = createContext<ContextType>(...);
 
@@ -358,7 +358,7 @@ Estrutura típica:
 
 	// 3. Hook customizado
 	export const useMyContext = () => {...};
-	```
+```
 
 ## 4. /types
 
@@ -375,11 +375,11 @@ Estrutura típica:
 - Boas práticas:
 	- Tipos específicos perto de seus usos:
 
-	```bash
+```bash
 	/components
   		/ExpenseForm
     		types.ts
-    ```
+```
 ## 5. /utils
 
 - Finalidade: Funções utilitárias/helpers
@@ -400,7 +400,7 @@ Estrutura típica:
 
 - Exemplo de utilidade:
 
-	```bash
+```bash
 	//src/utils/currencyFormatter.ts
 	export const formatBRL = (value: number) => {
   		return new Intl.NumberFormat('pt-BR', {
@@ -408,7 +408,7 @@ Estrutura típica:
     		currency: 'BRL'
   		}).format(value);
 	};
-	```
+```
 
 ## 6. Fluxo de Dados Típico
 
