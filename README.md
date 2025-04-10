@@ -1,4 +1,4 @@
-# Projeto React Native com Expo e TypeScript: Controle de Gastos Pessoais
+# React Native
 
 ## Introdução ao React Native
 
@@ -16,7 +16,7 @@ O React Native é construído com base no JavaScript, e o Node.js é a plataform
 
 O npm (Node Package Manager) é uma ferramenta que permite instalar e gerenciar pacotes de JavaScript. O Yarn é outra opção semelhante. Ambos são amplamente usados com o React Native. Eles são instalados automaticamente quando você instala o Node.js.
 
-### Passo 3: Instalação do Expo 
+### Passo 3: Instalação do Expo (Opcional)
 
 O Expo é uma ferramenta que simplifica o desenvolvimento React Native, permitindo que você crie aplicativos sem a necessidade de configurar emuladores ou ambientes nativos. Para instalá-lo, você pode executar o seguinte comando no terminal:
 
