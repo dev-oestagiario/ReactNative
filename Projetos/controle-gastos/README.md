@@ -30,7 +30,7 @@ npm run web       # Para versão web
   /contexts      # Contextos do React
   /types         # Tipos TypeScript
   /utils         # Utilitários e helpers
-```
+``
 
 Crie essas pastas manualmente ou com o comando:
 ```bash
@@ -74,7 +74,7 @@ import logo from './assets/logo.png';
 🔹 O que é: Componente principal do React Native
 
 Exemplo de código:
-
+```javascript
 import React from 'react';
 import { View, Text } from 'react-native';
 
@@ -85,21 +85,21 @@ export default function App() {
     </View>
   );
 }
-
+````
 🔹 Características:
 
-Ponto de entrada da aplicação
+- Ponto de entrada da aplicação
 
-Componente raiz (tudo parte daqui)
+- Componente raiz (tudo parte daqui)
 
-Extensão .tsx indica uso de JSX + TypeScript
+- Extensão .tsx indica uso de JSX + TypeScript
 
 ## 4. app.json
 
 🔹 O que é: Arquivo de configuração do Expo
 
-Conteúdo exemplo:
-
+- Conteúdo exemplo:
+```json
 {
   "expo": {
     "name": "Controle Gastos",
@@ -116,42 +116,42 @@ Conteúdo exemplo:
     }
   }
 }
-
+```
 🔹 Configurações importantes:
 
-name: Nome do app (como aparece no celular)
+- name: Nome do app (como aparece no celular)
 
-slug: Usado em URLs (expo.io/@yourname/slug)
+- slug: Usado em URLs (expo.io/@yourname/slug)
 
-icon/splash: Imagens de ícone e tela inicial
+- icon/splash: Imagens de ícone e tela inicial
 
-Configs específicas por plataforma (android/ios)
+- Configs específicas por plataforma (android/ios)
 
 ## 5. package.json
 
 🔹 O que é: Arquivo de configuração do Node.js/npm
 
-Partes principais:
+- Partes principais:
 
 a) Metadados:
-
+```json
 {
   "name": "controle-gastos",
   "version": "1.0.0",
   "private": true
 }
-
+```
 b) Scripts (comandos úteis):
-
+```json
 "scripts": {
   "start": "expo start",
   "android": "expo start --android",
   "ios": "expo start --ios",
   "web": "expo start --web"
 }
-
+```
 c) Dependências:
-
+```json
 "dependencies": {
   "expo": "~48.0.0",
   "react": "18.2.0",
@@ -161,21 +161,21 @@ c) Dependências:
   "@types/react": "~18.0.0",
   "typescript": "~4.9.0"
 }
-
+```
 🔹 Funções:
 
-Lista todas as bibliotecas necessárias
+- Lista todas as bibliotecas necessárias
 
-Define comandos para rodar o projeto
+- Define comandos para rodar o projeto
 
-Especifica versões de cada dependência
+- Especifica versões de cada dependência
 
 ## 6. tsconfig.json
 
 🔹 O que é: Configuração do TypeScript
 
 Conteúdo típico:
-
+```json
 {
   "compilerOptions": {
     "jsx": "react-native",
@@ -186,61 +186,64 @@ Conteúdo típico:
   },
   "exclude": ["node_modules"]
 }
-
+```
 🔹 Opções importantes:
 
-jsx: Como tratar sintaxe JSX
+- jsx: Como tratar sintaxe JSX
 
-strict: Ativa verificações de tipo
+- strict: Ativa verificações de tipo
 
-esModuleInterop: Compatibilidade entre módulos
+- esModuleInterop: Compatibilidade entre módulos
 
 🔹 Propósito:
 
-Define regras para checagem de tipos
+- Define regras para checagem de tipos
 
-Configura como o TS compila para JS
+- Configura como o TS compila para JS
 
 ## 7. babel.config.js
 
 🔹 O que é: Configuração do Babel (transpilador)
 
 Conteúdo padrão:
-
+```javascript
 module.exports = {
   presets: ['babel-preset-expo']
 };
-
+```
 🔹 Funcionamento:
 
-babel-preset-expo inclui:
+- babel-preset-expo inclui:
 
-Preset para React Native
+	- Preset para React Native
 
-Suporte a JavaScript moderno
+	- Suporte a JavaScript moderno
 
-Otimizações para mobile
+	- Otimizações para mobile
 
 ℹ️ Importante:
 
-Raramente precisa ser modificado
+- Raramente precisa ser modificado
 
-Adicione plugins apenas para funcionalidades extras
+- Adicione plugins apenas para funcionalidades extras
 
-Fluxo de Execução
-Inicialização:
-Expo lê app.json para configurações
+## Fluxo de Execução
 
-Carrega App.tsx como componente raiz
+- Inicialização:
+	
+	- Expo lê app.json para configurações
 
-Desenvolvimento:
-Babel transpila TypeScript/JSX (usando tsconfig.json)
+	- Carrega App.tsx como componente raiz
 
-Metro Bundler empacota o código
+- Desenvolvimento:
 
-Build:
-Expo CLI usa todas essas configurações para gerar os binários
+	- Babel transpila TypeScript/JSX (usando tsconfig.json)
 
+	- Metro Bundler empacota o código
+
+- Build:
+	 
+	- Expo CLI usa todas essas configurações para gerar os binários
 
 
 📦 Dependências Necessárias
