@@ -29,8 +29,12 @@ controle-gastos/
 ├── App.tsx
 ├── app.json
 ├── package.json
+├── index.ts
 ├── tsconfig.json
 └── babel.config.js
+
+
+
 ```
 ## 1. node_modules/
 
@@ -164,7 +168,14 @@ c) Dependências:
 
 - Especifica versões de cada dependência
 
-## 6. tsconfig.json
+## 6. index.ts
+
+🔹 O que é:
+
+- Ponto de entrada alternativo para módulos
+- Configuração adicional do aplicativo
+
+## 7. tsconfig.json
 
 🔹 O que é: Configuração do TypeScript
 
@@ -195,7 +206,7 @@ Conteúdo típico:
 
 - Configura como o TS compila para JS
 
-## 7. babel.config.js
+## 8. babel.config.js
 
 🔹 O que é: Configuração do Babel (transpilador)
 
@@ -221,7 +232,7 @@ module.exports = {
 
 - Adicione plugins apenas para funcionalidades extras
 
-## Fluxo de Execução
+## 9. Fluxo de Execução
 
 - Inicialização:
 	
@@ -255,6 +266,169 @@ Crie essas pastas manualmente ou com o comando:
 ```bash
 mkdir -p src/{components,screens,contexts,types,utils}
 ```
+## 1. /components
+
+Finalidade: Armazenar componentes reutilizáveis da UI
+
+- Conteúdo típico:
+
+	- Componentes "burros" (apresentacionais)
+
+	- Peças de UI usadas em múltiplas telas
+
+	- Exemplos no projeto:
+
+		- ExpenseForm.tsx (formulário de gastos)
+
+		- BottomTabsNavigator.tsx (navegação por abas)
+
+- Características:
+
+	- Recebem dados via props
+
+	- Não gerenciam estado próprio (quando possível)
+
+	- Estilização isolada
+
+	- Nomeclatura: NomeDoComponente.tsx
+
+- Boas práticas:
+
+	- Um componente por arquivo
+
+	- Pastas para componentes complexos:
+
+			```bash
+			/components
+			  /ExpenseCard
+			    index.ts
+			    ExpenseCard.tsx
+			    styles.ts
+			```
+## 2. /screens
+
+- Finalidade: Telas principais/navegáveis do app
+
+- Conteúdo típico no projeto:
+
+	- AddExpenseScreen.tsx (tela de adição) 
+	- ExpenseListScreen.tsx (lista de gastos)
+	- SummaryScreen.tsx (resumo financeiro)
+
+- Diferença para componentes:
+	- Representam rotas/navegação
+	- Normalmente compostas por múltiplos componentes
+	- Conectadas ao sistema de navegação
+	- Gerenciam lógica de tela específica
+
+- Padrões recomendados:
+	- Nomeclatura: NomeDaTelaScreen.tsx
+	- Deveriam ser "lean" (magras), delegando lógica para:
+
+			- Hooks customizados
+			- Contextos
+			- Componentes filhos
+
+## 3. /contexts
+
+- Finalidade: Gerenciamento de estado global
+
+- Arquivo principal no projeto:
+	- ExpenseContext.tsx (gerencia a lista de gastos)
+
+- Contém:
+	- Definições de contexto
+	- Providers
+	- Hooks customizados (ex: useExpenses())
+
+- Quando usar:
+	- Dados compartilhados por muitas telas
+	- Estado de autenticação
+	- Configurações do usuário
+	- Tema da aplicação
+
+Estrutura típica:
+
+	```bash
+	// 1. Criação do contexto
+	const MyContext = createContext<ContextType>(...);
+
+	// 2. Provider component
+	export const MyProvider = ({ children }) => {...};
+
+	// 3. Hook customizado
+	export const useMyContext = () => {...};
+	```
+
+## 4. /types
+
+- Finalidade: Definir tipos TypeScript
+
+- Arquivo principal:
+	- index.ts (exporta todos os tipos)
+
+- Contéudo no projeto:
+	- Tipos de gastos (Expense)
+	- Categorias (ExpenseCategory) 
+	- Tipos de contexto (ExpenseContextType)
+
+- Boas práticas:
+	- Tipos específicos perto de seus usos:
+
+	```bash
+	/components
+  		/ExpenseForm
+    		types.ts
+    ```
+## 5. /utils
+
+- Finalidade: Funções utilitárias/helpers
+
+- Exemplos do que poderia conter:
+
+	- currencyFormatter.ts (formatação monetária)
+
+	- dateUtils.ts (manipulação de datas)
+
+	- storage.ts (wrapper para AsyncStorage)
+
+- Características:
+
+	- Funções puras (sem side-effects)
+	- Lógica reutilizável desacoplada
+	- Testes unitários fáceis
+
+- Exemplo de utilidade:
+
+	```bash
+	//src/utils/currencyFormatter.ts
+	export const formatBRL = (value: number) => {
+  		return new Intl.NumberFormat('pt-BR', {
+    		style: 'currency',
+    		currency: 'BRL'
+  		}).format(value);
+	};
+	```
+
+## 6. Fluxo de Dados Típico
+
+- Dados entram por:
+	- Telas (/screens) via interação do usuário
+	- API externa (não implementado ainda)
+
+- São processados em:
+	- Utilitários (/utils)
+	- Hooks customizados
+
+- Armazenados no:
+	- Contexto (/contexts)
+
+- Exibidos por:
+	- Componentes (/components)
+	- Organizados em Telas (/screens)
+
+- Tipados por:
+	- Definições em (/types)
 
 📦 Dependências Necessárias
 
