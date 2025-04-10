@@ -16,10 +16,10 @@ npx create-expo-app controle-gastos --template expo-template-blank-typescript
 ```
 ### Passo 2: Executar o projeto
 
-cd controle-gastos
-npm run android   # Para Android
-npm run ios       # Para iOS
-npm run web       # Para versão web
+	- cd controle-gastos
+	- npm run android   # Para Android
+	- npm run ios       # Para iOS
+	- npm run web       # Para versão web
 
 # Estrutura do Projeto React Native com Expo e TypeScript
 ```bash
@@ -31,7 +31,7 @@ controle-gastos/
 ├── package.json
 ├── tsconfig.json
 └── babel.config.js
-```
+``
 ## 1. node_modules/
 
 🔹 **O que é**: Pasta criada automaticamente pelo npm/yarn
