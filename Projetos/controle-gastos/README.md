@@ -23,12 +23,14 @@ npm run web       # Para versão web
 
 📂 Estrutura de Pastas
 
+```bash
 /src
   /components    # Componentes reutilizáveis
   /screens       # Telas do aplicativo
   /contexts      # Contextos do React
   /types         # Tipos TypeScript
   /utils         # Utilitários e helpers
+```
 
 Crie essas pastas manualmente ou com o comando:
 ```bash
