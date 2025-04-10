@@ -31,7 +31,7 @@ controle-gastos/
 ├── package.json
 ├── tsconfig.json
 └── babel.config.js
-``
+```
 ## 1. node_modules/
 
 🔹 **O que é**: Pasta criada automaticamente pelo npm/yarn
@@ -61,7 +61,7 @@ controle-gastos/
 🔹 **Uso típico**:
 ```javascript
 import logo from './assets/logo.png';
-````
+```
 
 ## 3. App.tsx
 
