@@ -435,8 +435,35 @@ Estrutura típica:
 Instale as bibliotecas adicionais:
 
 ```bash
-npx expo install react-native-paper @react-navigation/native @react-navigation/native-stack react-native-screens react-native-safe-area-context react-native-vector-icons @types/react-native-vector-icons
+npx expo install react-native-paper @react-navigation/native @react-navigation/native-stack react-native-screens react-native-safe-area-context react-native-vector-icons @types/react-native-vector-icons @react-navigation/bottom-tabs @react-navigation/native react-native-vector-icons react-native-screens react-native-safe-area-context
 ```
+<!--npm install @react-navigation/bottom-tabs @react-navigation/native react-native-screens react-native-safe-area-context react-native-vector-icons -->
+
+<!-- ## Passo 4: Definindo os Tipos
+
+- Crie o arquivo src/types/index.ts
+
+Passo 5: Criando o Contexto de Gastos
+Crie src/contexts/ExpenseContext.tsx
+
+Passo 6: Componentes Reutilizáveis
+Crie src/components/ExpenseForm.tsx
+
+Passo 7: Criando as Telas
+Crie src/screens/AddExpenseScreen.tsx
+Crie src/screens/ExpenseListScreen.tsx
+Crie src/screens/SummaryScreen.tsx
+
+Passo 8: Configurando a Navegação
+Crie src/components/BottomTabsNavigator.tsx
+
+Passo 9: Configurando o App Principal
+Atualize o App.tsx
+
+Passo 10: Executando o Projeto
+Execute o projeto com:
+npx expo start -->
+
 
 ⚙️ Configuração do VS Code
 
