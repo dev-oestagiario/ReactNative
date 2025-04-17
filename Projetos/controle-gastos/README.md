@@ -439,19 +439,21 @@ npx expo install react-native-paper @react-navigation/native @react-navigation/n
 ```
 <!--npm install @react-navigation/bottom-tabs @react-navigation/native react-native-screens react-native-safe-area-context react-native-vector-icons -->
 
-<!-- ## Passo 4: Definindo os Tipos
+## Passo 4: Definindo os Tipos
 
-- Crie o arquivo src/types/index.ts
+- Criar o arquivo src/types/index.ts
 
-Passo 5: Criando o Contexto de Gastos
-Crie src/contexts/ExpenseContext.tsx
+## Passo 5: Criando o Contexto de Gastos
 
-Passo 6: Componentes Reutilizáveis
-Crie src/components/ExpenseForm.tsx
+- Criar src/contexts/ExpenseContext.tsx
 
-Passo 7: Criando as Telas
+## Passo 6: Componentes Reutilizáveis
+
+- Criar src/components/ExpenseForm.tsx
+
+## Passo 7: Criando as Telas
 Crie src/screens/AddExpenseScreen.tsx
-Crie src/screens/ExpenseListScreen.tsx
+<!-- Crie src/screens/ExpenseListScreen.tsx
 Crie src/screens/SummaryScreen.tsx
 
 Passo 8: Configurando a Navegação
