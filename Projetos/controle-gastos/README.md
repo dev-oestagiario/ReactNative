@@ -435,7 +435,7 @@ Estrutura típica:
 Instale as bibliotecas adicionais:
 
 ```bash
-npx expo install react-native-paper @react-navigation/native @react-navigation/native-stack react-native-screens react-native-safe-area-context react-native-vector-icons @types/react-native-vector-icons @react-navigation/bottom-tabs @react-navigation/native react-native-vector-icons react-native-screens react-native-safe-area-context
+npx expo install react-native-paper @react-navigation/native @react-navigation/native-stack react-native-screens react-native-safe-area-context react-native-vector-icons @types/react-native-vector-icons
 ```
 <!--npm install @react-navigation/bottom-tabs @react-navigation/native react-native-screens react-native-safe-area-context react-native-vector-icons -->
 
