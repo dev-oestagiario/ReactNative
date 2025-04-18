@@ -19,10 +19,9 @@ const styles = StyleSheet.create({
   },
 }); */
 
-//Teste de integração 
 import React from 'react';
-import { View, Button, ScrollView, Text } from 'react-native'; // Adicionado Text nos imports
-import { ExpenseProvider, useExpenses } from './src/contexts/ExpenseContext';
+import { View, Button, ScrollView } from 'react-native';
+import { ExpenseProvider, useExpenses } from './ExpenseContext';
 
 const TestComponent = () => {
   const { expenses, addExpense, removeExpense } = useExpenses();
