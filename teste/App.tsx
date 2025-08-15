@@ -37,4 +37,19 @@ class App extends Component {
   }
 }
 
+
+class job extends Component {
+  render(){
+    let nome = "Que tipo de doguinho é esse?"
+    let url = 'url'
+
+    return (
+          <View style={{backgroundColor: "#DCC5B2"}}>
+            <Text>
+              Choco - late
+            </Text>
+          </View>
+        );
+  }
+}
 export default App;
